@@ -1,0 +1,49 @@
+.navbar {
+    background-color: #F3F3F1;
+}
+
+.navbar-image{
+	height: 50px;
+	width: 41;
+}
+
+
+/* Links  */
+.navbar-link{
+	text-decoration: none;
+	color: rgba(0,0,0,.5);
+	margin: 0 10px 0 10px;
+}
+
+.navbar-collapse{
+    max-height: 50px;
+}
+
+a {
+	text-decoration: none;
+	color: rgba(0,0,0,.5);
+	margin: 0 10px 0 10px;
+}
+
+a:hover{
+	text-decoration: none;
+	color: rgba(0,0,0,.7);
+}
+
+
+.navbar-nav{
+	text-decoration: none;
+	color: rgba(0,0,0,.5);
+	margin: 0 10px 0 10px;
+}
+.navbar-nav :hover{
+	text-decoration: none;
+	color: rgba(0,0,0,.7);
+	cursor: pointer;
+}
+
+.dropdown-menu.show{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
