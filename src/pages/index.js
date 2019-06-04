@@ -1,33 +1,21 @@
 import React from "react"
-import { Link } from "gatsby"
+import Helmet from 'react-helmet'
+import style from './styles/Index.module.sass'
 
 // Client Components
 import Client from '../components/ClientComponents/Client';
 import ClientNavbar from '../components/ClientComponents/ClientNavbar';
-import Calendar from '../Components/ClientComponents/Calendar';
-import AboutUs from '../Components/ClientComponents/AboutUs';
-import FAQ from '../Components/ClientComponents/FAQ';
-import Gallery from '../Components/ClientComponents/Gallery';
-import ReachOut from '../Components/ClientComponents/ReachOut';
+import Footer from '../components/ClientComponents/Footer'
 
 const IndexPage = () =>(
-			<Router>
-				<ScrollToTop>
       	<div className="App">
+        <Helmet>
+        <link href="https://fonts.googleapis.com/css?family=EB+Garamond&amp;display=swap" rel="stylesheet" />
+        </Helmet>
         <ClientNavbar />
-					<Switch>
-						<Route exact path = '/' component={Client} />
-						<Route exact path = '/events' component={Calendar} />
-						<Route exact path = '/aboutus' component={AboutUs} />
-						<Route exact path = '/faqs' component={FAQ} />
-						<Route exact path = '/gallery' component={Gallery} />
-						<Route exact path = '/reachout' component={ReachOut} />
-					</Switch>
-
-					<Footer />
+        <Client />
+				<Footer />
       	</div>
-				</ScrollToTop>
-			</Router>
 )
 
 

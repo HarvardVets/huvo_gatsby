@@ -1,6 +1,6 @@
 import React from 'react';
-import Ajax from '../../../Ajax.js';
-import './stylesheet.css';
+import Ajax from '../Ajax.js';
+import style from './styles/AboutUs.module.sass';
 
 export default class AboutUs extends React.Component{
 	constructor(props){
@@ -25,13 +25,13 @@ export default class AboutUs extends React.Component{
 
 	render(){
 		return(
-				<div className='about-us-page'>
-					<h3 className='about-us-tag'>The Team</h3>
-					<div className='about-us-members-wrapper' style={this.state.loaded ? {}: {display: 'none'}}>
+				    <div className={style.page}>
+					  <h3 className={ style.tag }>The Team</h3>
+					<div className={ style.wrapper } style={this.state.loaded ? {}: {display: 'none'}}>
 						{this.state.members.map(member => (
-							<div className='about-us-single-member' key={member.id}>
+							<div className={ style.member } key={member.id}>
 								<img src={member.picture} alt={member.name} onLoad={()=> this.setState({loaded: true})}/>
-								<div className='about-us-single-member-description'>
+								<div className={ style.description }>
 									<h4>{member.name}</h4>
 									<p>{member.description}</p>
 									<p>Contact me at {member.email}</p>

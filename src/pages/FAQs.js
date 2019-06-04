@@ -1,6 +1,6 @@
 import React from 'react';
-import Ajax from '../../../Ajax.js';
-import './stylesheet.css';
+import Ajax from '../Ajax.js';
+import style from './styles/FAQs.module.sass';
 
 export default class FAQ extends React.Component{
 	constructor(props){
@@ -23,10 +23,10 @@ export default class FAQ extends React.Component{
 
 	render(){
 		return(
-			<div className='faq-page'>
-				<h3 className='faq-tag'>FAQs</h3>
+			      <div className={style.page}>
+				    <h3 className={style.tag}>FAQs</h3>
 				{this.state.questions.map(question => (
-					<div className='faq-question-wrapper' key={question.id}>
+					      <div className={style.wrapper} key={question.id}>
 						<h4>{question.question}</h4>
 						<p>{question.answer}</p>
 					</div>

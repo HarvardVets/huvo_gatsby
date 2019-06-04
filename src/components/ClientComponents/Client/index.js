@@ -1,5 +1,4 @@
 import React from 'react';
-import IndexSplash from './IndexSplash.js';
 import IndexMission from './IndexMission.js';
 import IndexPoints from './IndexPoints.js';
 

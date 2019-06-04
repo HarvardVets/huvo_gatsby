@@ -1,0 +1,9 @@
+.not-found-page {
+	min-height: 800px;
+}
+
+.not-found-tag {
+	color: #990000;
+	text-shadow: 0.5px 0.5px black;
+	margin-bottom: 25px;
+}

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { navigate } from 'gatsby';
-import Ajax from '../../../Ajax.js';
+import Ajax from '../Ajax.js';
 
-import './stylesheet.css';
+import style from './styles/ReachOut.module.sass';
 
 export default class ReachOut extends React.Component {
 	constructor(props){
@@ -39,9 +39,9 @@ export default class ReachOut extends React.Component {
 
 	render(){
 		 return (
-				<div className='reach-out-page'>
-					<h3 className='reach-out-tag'>Reach Out to Us</h3>
-					<div className='reach-out-wrapper'>
+				     <div className={style.page}>
+					   <h3 className={style.tag}>Reach Out to Us</h3>
+					   <div className={style.wrapper}>
 					<Form>
 						<Form.Group controlId="formSendEmail">
 							<Form.Control type='text'

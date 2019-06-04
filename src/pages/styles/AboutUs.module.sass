@@ -1,0 +1,47 @@
+.page
+  min-height: 1000px
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.tag
+  color: #990000
+  text-shadow: 0.5px 0.5px black
+
+
+.wrapper
+  margin-top: 5%
+  width: 60%
+  display: flex
+  align-items: center
+  flex-direction: column
+  overflow: auto
+
+
+.member
+  height: 100%
+  width: 100%
+  margin: 15px
+  display: flex
+  justify-content: flex-start
+  img
+      width: 50%
+      height: 100%
+
+
+.description
+  display: flex
+  margin-left: auto
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+  height: 100%
+  overflow: auto
+
+
+/*Media Queries*/
+@media only screen and (max-device-width:1024px)
+  .member
+    flex-direction: column
+    img
+      width: 100%

@@ -1,6 +1,6 @@
 import React from 'react';
-import Ajax from '../../../Ajax.js';
-import './stylesheet.css';
+import Ajax from '../Ajax.js';
+import style from './styles/Gallery.module.sass';
 
 export default class Gallery extends React.Component {
 	constructor(props){
@@ -25,18 +25,18 @@ export default class Gallery extends React.Component {
 
 	render(){
 		return(
-			<div className='gallery-page'>
-				<h3 className='gallery-tag'>Gallery</h3>
+			      <div className={style.page}>
+				    <h3 className={style.tag}>Gallery</h3>
 				{this.state.gallery.length <= 0 ? (
-					<div className='gallery-container'>
+					      <div className={style.container}>
 						<h4>Check back soon for some new photos!</h4>
 					</div>
 				) : (
-					<div className='gallery-container' style={this.state.loaded ? {}: {display: 'none'}}>
+					      <div className={style.container} style={this.state.loaded ? {}: {display: 'none'}}>
 					{this.state.gallery.map(img => (
-						<div key={img.id} className='gallery-single-image-container'>
+						      <div key={img.id} className={style.imagecontainer}>
 							<img src={img.url} alt={img.caption} onLoad={()=> this.setState({loaded: true})}/>
-							<div className='gallery-single-caption'>
+							    <div className={style.caption}>
 								<p>{img.caption}</p>
 							</div>
 						</div>
