@@ -1,33 +1,37 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
+import React from 'react'
+import { Navbar, Nav } from 'react-bootstrap'
+//##TODO: Fix css for this
+import './ClientComponents/ClientNavbar/stylesheet.css'
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
+  <header>
+    <Navbar collapseOnSelect="true" expand="xl">
+      <Navbar.Toggle />
+
+      <Navbar.Collapse>
+        <Nav.Link class="navbar-logo" href="/">
+          {
+            <img
+              alt="Harvard College Shield"
+              src={require('../../../images/harvard-college.png')}
+              className="navbar-image"
+            />
+          }
+        </Nav.Link>
+        <Nav className="mr-auto">
+          {menuLinks.map(el => (
+            <Nav.Link className="navbar-link" href={el.link}>
+              {el.name}
+            </Nav.Link>
+          ))}
+        </Nav>
+        <Navbar.Brand href="/" className="justify-content-end">
+          Harvard Undergraduate Veterans Organization
+        </Navbar.Brand>
+      </Navbar.Collapse>
+    </Navbar>
   </header>
 )
 
