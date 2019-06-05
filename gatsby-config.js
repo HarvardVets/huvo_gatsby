@@ -1,39 +1,39 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Harvard Undergraduate Veterans Organization`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-      menuLinks: [
-          {
-              name: 'Reach Out',
-              link: '/ReachOut'
-          },
-          {
-              name: 'About the Team',
-              link: '/AboutUs'
-          },
-          {
-              name: 'Events',
-              link: '/Events'
-          },
-          {
-              name: 'FAQ',
-              link: '/FAQs'
-          },
-          {
-              name: 'Gallery',
-              link: '/Gallery'
-          }
-      ]
+    author: `Curt and @drawnwren`,
+    menuLinks: [
+      {
+        name: 'Reach Out',
+        link: '/ReachOut',
+      },
+      {
+        name: 'About the Team',
+        link: '/AboutUs',
+      },
+      {
+        name: 'Events',
+        link: '/Events',
+      },
+      {
+        name: 'FAQ',
+        link: '/FAQs',
+      },
+      {
+        name: 'Gallery',
+        link: '/Gallery',
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-      {
-          resolve: `gatsby-plugin-sass`,
-          options: {
-              implementation: require("sass"),
-          },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        implementation: require('sass'),
       },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -55,6 +55,7 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-netlify-cms`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

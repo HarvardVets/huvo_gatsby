@@ -1,28 +1,31 @@
-import { Link } from 'gatsby'
+import { Link, StaticQuery } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
+
+// Static assets
 //##TODO: Fix css for this
 import './ClientComponents/ClientNavbar/stylesheet.css'
+import collegeShield from '../images/harvard-college.png'
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, menuLinks }) => (
   <header>
     <Navbar collapseOnSelect="true" expand="xl">
       <Navbar.Toggle />
 
       <Navbar.Collapse>
-        <Nav.Link class="navbar-logo" href="/">
+        <Nav.Link className="navbar-logo" href="/">
           {
             <img
               alt="Harvard College Shield"
-              src={require('../../../images/harvard-college.png')}
+              src={collegeShield}
               className="navbar-image"
             />
           }
         </Nav.Link>
         <Nav className="mr-auto">
-          {menuLinks.map(el => (
-            <Nav.Link className="navbar-link" href={el.link}>
+          {menuLinks.map((el, i) => (
+            <Nav.Link className="navbar-link" href={el.link} key={i}>
               {el.name}
             </Nav.Link>
           ))}
