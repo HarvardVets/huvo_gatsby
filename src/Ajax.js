@@ -11,6 +11,7 @@ export default class Ajax {
   // Email
   static async sendEmail(payload) {
     try {
+      //##TODO: include unique token to stop spam
       let response = axios.post(`${BASE_URL}/reachout`, payload)
       return response.data
     } catch (e) {
