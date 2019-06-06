@@ -1,7 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
-import Loading from './HelperComponents/Loading'
 import style from '../styles/Events.module.sass'
 
 const Events = () => (
