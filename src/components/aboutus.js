@@ -1,9 +1,8 @@
 import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 
-import Ajax from '../Ajax.js'
-import style from '../pages/styles/AboutUs.module.sass'
-import Member from './ClientComponents/AboutUs/member.js'
+import style from '../styles/AboutUs.module.sass'
+import Member from './AboutUs/member.js'
 
 const About = () => (
   <StaticQuery
