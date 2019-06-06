@@ -1,4 +1,15 @@
 import React from 'react'
+import Layout from '../components/layout.js'
+import ReachOut from '../components/reachout.js'
+
+const ReachOutPage = () => (
+  <Layout>
+    <ReachOut />
+  </Layout>
+)
+
+export default ReachOutPage
+/*
 import { Form, Button } from 'react-bootstrap'
 import { navigate } from 'gatsby'
 
@@ -73,3 +84,5 @@ export default class ReachOut extends React.Component {
     )
   }
 }
+
+*/
