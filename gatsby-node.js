@@ -5,16 +5,21 @@ exports.createPages = ({ actions, graphql }) => {
 
   const blogPostTemplate = path.resolve(`src/templates/blogTemplate.js`)
 
+  // query for all markdown files in the subfolder, 'blog', by descending date
   return graphql(`
     {
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
         limit: 1000
+        filter: {fileAbsolutePath: {regex: "/(blog)/.*\\.md$/"}}
       ) {
         edges {
           node {
+            html
             frontmatter {
               path
+              date(formatString: "MMMM DD, YYYY")
+              title
             }
           }
         }
@@ -27,9 +32,11 @@ exports.createPages = ({ actions, graphql }) => {
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
-        path: node.frontmatter.path,
+        path: `/blog/${node.frontmatter.path}`,
         component: blogPostTemplate,
-        context: {}, // additional data can be passed via context
+        context: {
+          node,
+        },
       })
     })
   })

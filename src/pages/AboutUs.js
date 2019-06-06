@@ -1,7 +1,18 @@
-import React from 'react';
-import Ajax from '../Ajax.js';
-import style from './styles/AboutUs.module.sass';
+import React from 'react'
 
+import About from '../components/About.js'
+import Layout from '../components/layout.js'
+import Ajax from '../Ajax.js'
+import style from './styles/AboutUs.module.sass'
+
+const AboutUs = () => (
+  <Layout>
+    <About />
+  </Layout>
+)
+
+export default AboutUs
+/*
 export default class AboutUs extends React.Component{
 	constructor(props){
 		super(props);
@@ -45,3 +56,4 @@ export default class AboutUs extends React.Component{
 	}
 
 }
+*/

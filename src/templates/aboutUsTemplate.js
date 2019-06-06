@@ -4,7 +4,8 @@ import { graphql } from 'gatsby'
 export default function Template({
   pageContext, // this prop will be injected by the GraphQL query below.
 }) {
-  const { frontmatter, html } = pageContext.node
+  const { markdownRemark } = pageContext // data.markdownRemark holds our post data
+  const { frontmatter, html } = markdownRemark
   return (
     <div className="blog-post-container">
       <div className="blog-post">
