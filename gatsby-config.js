@@ -5,16 +5,16 @@ module.exports = {
     author: `Curt and @drawnwren`,
     menuLinks: [
       {
-        name: 'Reach Out',
-        link: '/ReachOut',
-      },
-      {
         name: 'About the Team',
         link: '/AboutUs',
       },
       {
         name: 'Events',
         link: '/Events',
+      },
+      {
+        name: 'Reach Out',
+        link: '/ReachOut',
       },
       {
         name: 'FAQ',

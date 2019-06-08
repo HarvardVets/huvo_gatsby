@@ -4,14 +4,13 @@
  *
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
-
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 
 import Header from './header'
-import Footer from './ClientComponents/Footer'
+import Footer from './footer.js'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -43,7 +42,7 @@ const Layout = ({ children }) => (
         />
         <main>{children}</main>
         <footer>
-          <Footer />
+          <Footer menuLinks={data.site.siteMetadata.menuLinks} />
         </footer>
       </div>
     )}

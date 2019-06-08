@@ -1,0 +1,111 @@
+@import '_vars'
+
+.client-index-page
+  min-height: 1000px
+
+.navbar-wrapper
+  background-color: $light_grey
+  text-align:center
+  font-family: Georgia
+
+
+.navbar-inner-wrapper
+  max-height: 50px
+  margin: 0 10px 0 10px
+  text-decoration: none
+  a
+    margin: 0 10px 0 10px
+
+
+.navbar-nav
+  margin: 0 10px 0 10px
+
+
+.index-point-wrapper
+  display: flex
+  justify-content: center
+  align-items: center
+  margin: 50px 0 100px 0
+
+.index-point
+  margin: 0 30px 0 30px
+  color: white
+  text-shadow: 0.5px 0.5px #30393A
+  text-align: center
+
+.shield
+  height: 50px
+  width: 41px
+
+.index-point-casing
+  display: flex
+  align-items: center
+
+.index-point-horizontal
+  display: none
+
+.index-splash-container
+  width: 100vw
+  height: 70vh
+  text-align: center
+  color: #A51C30
+  font-family: $harvard_font
+  font-size: 112px
+
+  background-image: url('../images/campus_two_crop.jpg')
+  background-size: cover
+  background-position: top
+  background-blend-mode: lighten
+  background-color: rgba(255,255,255,0.7)
+
+.splash-front
+  height: 80%
+
+
+.index-mission-container
+  display: flex
+  justify-content: center
+  margin-bottom: 50px
+
+
+.index-mission
+  width: 60vw
+  font-size: 1.2em
+
+/*Animations*/
+@keyframes fade-in
+  0%
+    opacity: 0
+
+  100%
+    opacity: 1
+
+
+.fade-in
+  -webkit-animation: fade-in 2.0s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s both
+    animation: fade-in 2.0s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s both
+
+
+
+/*Media Queries*/
+@media only screen and (max-device-width:1024px)
+  .index-splash-container
+   height: 40vh
+
+  .splash-front
+    width: 85%
+    height: auto
+
+  .index-point-wrapper
+    flex-direction: column
+
+  .index-point-vertical
+    display: none
+
+  .index-point-horizontal
+    display: block
+    height: 1px
+    width: 40%
+    border-top: 1px solid black
+    margin: 1em 0
+    padding: 0
