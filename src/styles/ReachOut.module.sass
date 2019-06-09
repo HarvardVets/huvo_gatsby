@@ -1,23 +1,54 @@
+@import '_vars'
+
 .page
   min-height: 800px
   display: flex
   flex-direction: column
   align-items: center
+  background-color: white
 
 
 .tag
   color: #990000
   text-shadow: 0.5px 0.5px black
 
+.marquee
+  background-color: $crimson
+  width: 100%
+  text-align: center
+  > h3
+    color: white
 
 .wrapper
-  width: 30vw
-  height: 50vh
-  display: flex
-  align-items: center
-  flex-direction: column
-  margin: 15px
+  width: 75vw
+  height: 100vh
+  display: grid
+  grid-template-columns: auto 1fr 1fr
+  grid-auto-flow: row dense
+  grid-gap: .8em
+  background: #eee
+  padding: 1.2em
+  > div,
+  > button
+    grid-column: 2
+    grid-row: auto
+  textarea
+    min-height: calc(100% - 1em)
+    width: 100%
+    grid-column: 3
+    grid-row: span 3
+  > button
+    max-height: 25%
+    line-height: 10px
+    background-color: $crimson
+    border: $crimson
 
+.form-item
+  outline: none
+  -webkit-box-shadow: none !important
+  -moz-box-shadow: none !important
+  box-shadow: none !important
+  margin: 15px 0 15px 0
 
 #formSendEmail.form-control
   display: inline
@@ -27,6 +58,23 @@
 textarea#formSendEmail.form-control
   height: 40vh
 
+#HIDE-PLACEHOLDER
+  input
+  textarea
+
+*
+  &:focus
+    border-color: none
+    box-shadow: none
+    outline: 0
+    &::-webkit-input-placeholder
+      opacity: 0
+    &:-moz-placeholder
+      opacity: 0
+    &::-moz-placeholder
+      opacity: 0
+    &:-ms-input-placeholder
+      opacity: 0
 
 /*Media Queries*/
 @media only screen and (max-device-width:1024px)

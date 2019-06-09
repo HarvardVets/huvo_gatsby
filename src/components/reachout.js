@@ -39,14 +39,17 @@ export default class ReachOut extends React.Component {
   render() {
     return (
       <div className={style.page}>
-        <h3 className={style.tag}>Reach Out to Us</h3>
-        <div className={style.wrapper}>
-          <Form>
-            <Form.Group controlId="formSendEmail">
+        <div className={style.marquee}>
+          <h3 className={style.tag}>Reach Out to Us</h3>
+        </div>
+        <Form>
+          <Form.Group controlId="formSendEmail" className={style.wrapper}>
+            <div>
               <Form.Control
                 type="text"
                 name="name"
                 placeholder="Your Name"
+                className={`${style.formItem} ${style.formFirstCol}`}
                 value={this.state.name}
                 onChange={this.handleChange}
               />
@@ -54,20 +57,24 @@ export default class ReachOut extends React.Component {
                 type="email"
                 name="email"
                 placeholder="Your Email"
+                className={`${style.formItem} ${style.formFirstCol}`}
                 value={this.state.email}
                 onChange={this.handleChange}
               />
-              <Form.Control
-                as="textarea"
-                name="message"
-                placeholder="Your Message"
-                value={this.state.message}
-                onChange={this.handleChange}
-              />
-              <Button onClick={this.handleSubmit}>Submit</Button>
-            </Form.Group>
-          </Form>
-        </div>
+            </div>
+            <Form.Control
+              as="textarea"
+              name="message"
+              placeholder="Your Message"
+              className={`${style.formItem} ${style.formSecondCol}`}
+              value={this.state.message}
+              onChange={this.handleChange}
+            />
+            <Button className={style.formButton} onClick={this.handleSubmit}>
+              Submit
+            </Button>
+          </Form.Group>
+        </Form>
       </div>
     )
   }
