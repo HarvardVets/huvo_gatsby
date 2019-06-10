@@ -11,6 +11,7 @@ import Helmet from 'react-helmet'
 
 import Header from './header'
 import Footer from './footer.js'
+import style from '../styles/Layout.module.sass'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -28,7 +29,7 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <div>
+      <div className={style.container}>
         <Helmet>
           <link
             href="https://fonts.googleapis.com/css?family=EB+Garamond&amp;display=swap"
@@ -41,9 +42,7 @@ const Layout = ({ children }) => (
           menuLinks={data.site.siteMetadata.menuLinks}
         />
         <main>{children}</main>
-        <footer>
-          <Footer menuLinks={data.site.siteMetadata.menuLinks} />
-        </footer>
+        <Footer menuLinks={data.site.siteMetadata.menuLinks} />
       </div>
     )}
   />
