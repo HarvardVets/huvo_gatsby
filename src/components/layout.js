@@ -29,20 +29,22 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <div className={style.container}>
-        <Helmet>
-          <link
-            href="https://fonts.googleapis.com/css?family=EB+Garamond&amp;display=swap"
-            rel="stylesheet"
-          />
-        </Helmet>
+      <div>
+        <div className={style.container}>
+          <Helmet>
+            <link
+              href="https://fonts.googleapis.com/css?family=EB+Garamond&amp;display=swap"
+              rel="stylesheet"
+            />
+          </Helmet>
 
-        <Header
-          siteTitle={data.site.siteMetadata.title}
-          menuLinks={data.site.siteMetadata.menuLinks}
-        />
-        <main>{children}</main>
-        <Footer menuLinks={data.site.siteMetadata.menuLinks} />
+          <Header
+            siteTitle={data.site.siteMetadata.title}
+            menuLinks={data.site.siteMetadata.menuLinks}
+          />
+          {children}
+          <Footer menuLinks={data.site.siteMetadata.menuLinks} />
+        </div>
       </div>
     )}
   />

@@ -25,10 +25,12 @@ const About = () => (
       }
     `}
     render={data => (
-      <div className={style.wrapper}>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <Member member={node.frontmatter} />
-        ))}
+      <div>
+        <div className={style.wrapper}>
+          {data.allMarkdownRemark.edges.map(({ node }) => (
+            <Member member={node.frontmatter} />
+          ))}
+        </div>
       </div>
     )}
   />
