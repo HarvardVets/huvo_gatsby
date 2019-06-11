@@ -29,3 +29,11 @@ collections:
       - { name: title, label: Title }
       - { name: picture, label: Picture, widget: image }
       - { name: description, label: Description }
+  - name: faqs
+    label: FAQs
+    folder: faqs
+    create: true
+    fields:
+      - { name: question, label: Question }
+      - { name: answer, label: Answer }
+      - { name: category, label: Category, wdiget: select, options: ["admissions", "attending Harvard", "HUVO logistics"}
