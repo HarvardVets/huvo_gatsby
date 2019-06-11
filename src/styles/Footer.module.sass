@@ -17,9 +17,6 @@
     margin: 0 10px 0 10px
   > a:hover
     text-decoration: none
-  &:hover
-    color: #FFFFFF
-    cursor: pointer
 
 .copyright
   position: absolute
@@ -35,6 +32,9 @@
   font-weight: bold
   color: #666666
   margin: 2px
+  &:hover
+      color: #FFFFFF
+      cursor: pointer
 
 .footer-tag-bar
   color: #666666 !important
@@ -70,8 +70,9 @@
       width: 50px
       border-radius: 15%
       opacity: 0.6
-  > img:hover
-    cursor: pointer
+  > div
+    > img:hover
+      cursor: pointer
 
 
 /*Media Queries*/

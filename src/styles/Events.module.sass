@@ -4,20 +4,30 @@
 .page
   min-height: 800px
 
+.marquee
+  background-color: $crimson
+  width: 100%
+  text-align: center
+  > h3
+    color: white
+
 .cal
   scrolling: no
-  margin: auto
   width: 50%
-  min-height: 500px
-  width: 50%
-  min-height: 500px
+  height: 100%
+  border: 3px $light_grey
 
 
 .wrapper
   overflow: auto
   margin: auto
-  width: 50%
-  height: 75%
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-content: center
+  width: 100%
+  height: 500px
+  min-height: 500px
 
 .suggestions
   margin: 0 10% 0 10%

@@ -1,7 +1,14 @@
+@import './_vars.sass'
+
+$theme-colors: ( "primary": $crimson )
+$body-bg: $crimson
+$body-color: black
+// bootstrap needs to come after global overrides
+@import '../../node_modules/bootstrap/scss/bootstrap.scss'
+
 body
   margin: 0
   padding: 0
-  background-color: #A51C30
   font-family: Georgia
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
