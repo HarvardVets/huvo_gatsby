@@ -1,8 +1,6 @@
 import React from 'react'
 
-import style from '../../styles/mission.module.sass'
-
-const IndexMission = ({ mission }) => (
+const IndexMission = ({ mission, style }) => (
   <div className={style.indexMissionContainer}>
     <p className={style.indexMission}>
       <span className={style.firstLetter}>{mission[0]}</span>

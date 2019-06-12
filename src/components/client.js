@@ -20,8 +20,11 @@ const Client = () => (
       <div className={style.clientIndexPage}>
         <div>
           <div className={style.indexSplashContainer} />
-          <IndexPoints />
-          <IndexMission mission={data.site.siteMetadata.mission} />
+          <IndexPoints style={style} />
+          <IndexMission
+            mission={data.site.siteMetadata.mission}
+            style={style}
+          />
         </div>
       </div>
     )}
