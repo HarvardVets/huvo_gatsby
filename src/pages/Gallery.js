@@ -1,5 +1,5 @@
 import React from 'react'
-import style from '../styles/gallery.module.sass'
+import style from './../styles/gallery.module.sass'
 
 export default class Gallery extends React.Component {
   constructor(props) {
