@@ -34,7 +34,6 @@ module.exports = {
       resolve: `gatsby-plugin-sass`,
       options: {
         implementation: require('sass'),
-        includePaths: `${__dirname}/src/styles`,
       },
     },
     {
