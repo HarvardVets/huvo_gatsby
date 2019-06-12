@@ -6,23 +6,23 @@ module.exports = {
     menuLinks: [
       {
         name: 'About the Team',
-        link: '/AboutUs',
+        link: '/aboutus',
       },
       {
         name: 'Events',
-        link: '/Events',
+        link: '/events',
       },
       {
         name: 'Reach Out',
-        link: '/ReachOut',
+        link: '/reachout',
       },
       {
         name: 'FAQ',
-        link: '/FAQs',
+        link: '/faqs',
       },
       {
         name: 'Gallery',
-        link: '/Gallery',
+        link: '/gallery',
       },
     ],
     mission:
