@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import { zip } from '../../utils/helpers.js'
+import style from '../../styles/client.module.sass'
 
 // ##TODO: factor this into graphql
 var points = [
@@ -21,7 +22,6 @@ var points = [
 
 class IndexPoints extends React.Component {
   render() {
-    let style = this.props.style
     points = points.map((el, i) => (
       <h3 className={style.indexPointCasing} key={i}>
         <Link className={style.indexPoint} to={el.link}>

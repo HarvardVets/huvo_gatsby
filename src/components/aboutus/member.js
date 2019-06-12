@@ -1,6 +1,8 @@
 import React from 'react'
 
-const Member = ({ member, style }) => (
+import style from '../../styles/aboutus.module.sass'
+
+const Member = ({ member }) => (
   <div className={style.member} key={member.id}>
     <img src={member.picture} alt={member.name} />
     <div className={style.description}>
