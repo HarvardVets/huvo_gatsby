@@ -1,5 +1,5 @@
 import React from 'react'
-import style from '../styles/faqs.module.sass'
+import style from './../styles/faqs.module.sass'
 
 /*
   this.props.faqs = {
