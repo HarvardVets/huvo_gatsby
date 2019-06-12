@@ -1,5 +1,4 @@
 import React from 'react'
-import Ajax from '../ajax.js'
 import style from '../styles/faqs.module.sass'
 
 /*
@@ -18,7 +17,6 @@ import style from '../styles/faqs.module.sass'
 export default class FAQ extends React.Component {
   render() {
     let questions = this.props.faqs
-    let resultant_jsx
     let categories = []
     console.log(questions)
     Object.keys(questions).forEach(category => {

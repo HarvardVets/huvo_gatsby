@@ -1,6 +1,6 @@
 import React from 'react'
 
-import style from '../../styles/AboutUs.module.sass'
+import style from '../../styles/aboutus.module.sass'
 
 const Member = ({ member }) => (
   <div className={style.member} key={member.id}>
