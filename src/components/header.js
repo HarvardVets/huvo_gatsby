@@ -3,7 +3,7 @@ import React from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
 
 // Static assets
-import style from '../styles/navbar.module.sass'
+import style from './../styles/navbar.module.sass'
 import collegeShield from '../images/harvard-college.png'
 
 const Header = ({ siteTitle, menuLinks }) => (
