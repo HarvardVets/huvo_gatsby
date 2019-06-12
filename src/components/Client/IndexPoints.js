@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import style from '../../styles/client.module.sass'
-import { zip } from '../../helpers.js'
+import { zip } from '../../utils/helpers.js'
 
 var points = [
   {

@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 // CSS
 import style from '../styles/footer.module.sass'
 
-import { zip } from '../helpers.js'
+import { zip } from '../utils/helpers.js'
 
 export default class Footer extends React.Component {
   render() {

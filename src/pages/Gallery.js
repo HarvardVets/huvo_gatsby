@@ -1,5 +1,4 @@
 import React from 'react'
-import Ajax from '../ajax.js'
 import style from '../styles/gallery.module.sass'
 
 export default class Gallery extends React.Component {
@@ -8,17 +7,6 @@ export default class Gallery extends React.Component {
     this.state = {
       gallery: [],
       loaded: false,
-    }
-  }
-
-  async componentDidMount() {
-    try {
-      let gallery = await Ajax.getAllGalleryImages()
-      this.setState({
-        gallery,
-      })
-    } catch (e) {
-      console.error(e)
     }
   }
 
