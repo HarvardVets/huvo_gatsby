@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import IndexMission from './client/mission.js'
 import IndexPoints from './client/indexpoints.js'
-import style from '../styles/client.module.sass'
+import style from './../styles/client.module.sass'
 
 const Client = () => (
   <StaticQuery
