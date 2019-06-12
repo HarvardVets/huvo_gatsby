@@ -1,5 +1,5 @@
 import React from 'react'
-import style from '../../styles/client.module.sass'
+import style from '../../styles/mission.module.sass'
 
 const IndexMission = ({ mission }) => (
   <div className={style.indexMissionContainer}>
