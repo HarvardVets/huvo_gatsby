@@ -1,8 +1,8 @@
 import React from 'react'
 import { Form, Button } from 'react-bootstrap'
 import { navigate } from 'gatsby'
-import Ajax from '../Ajax.js'
-import style from '../styles/ReachOut.module.sass'
+import Ajax from '../ajax.js'
+import style from '../styles/reachout.module.sass'
 
 export default class ReachOut extends React.Component {
   constructor(props) {

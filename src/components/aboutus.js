@@ -1,8 +1,8 @@
 import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 
-import style from '../styles/AboutUs.module.sass'
-import Member from './AboutUs/member.js'
+import style from '../styles/aboutus.module.sass'
+import Member from './aboutus/member.js'
 
 const About = () => (
   <StaticQuery

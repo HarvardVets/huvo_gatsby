@@ -1,9 +1,9 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 
-import IndexMission from './Client/mission.js'
-import IndexPoints from './Client/IndexPoints.js'
-import style from '../styles/Client.module.sass'
+import IndexMission from './client/mission.js'
+import IndexPoints from './client/indexpoints.js'
+import style from '../styles/client.module.sass'
 
 const Client = () => (
   <StaticQuery

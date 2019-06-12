@@ -11,7 +11,7 @@ import Helmet from 'react-helmet'
 
 import Header from './header'
 import Footer from './footer.js'
-import style from '../styles/Layout.module.sass'
+import style from '../styles/layout.module.sass'
 
 const Layout = ({ children }) => (
   <StaticQuery

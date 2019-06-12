@@ -1,6 +1,6 @@
 import React from 'react'
 
-import style from '../styles/Events.module.sass'
+import style from '../styles/events.module.sass'
 
 const Events = () => (
   <div className={style.page}>

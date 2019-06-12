@@ -1,6 +1,6 @@
 import React from 'react'
-import Ajax from '../Ajax.js'
-import style from '../styles/FAQs.module.sass'
+import Ajax from '../ajax.js'
+import style from '../styles/faqs.module.sass'
 
 /*
   this.props.faqs = {

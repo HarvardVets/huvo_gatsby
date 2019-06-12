@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 // CSS
-import style from '../styles/Footer.module.sass'
+import style from '../styles/footer.module.sass'
 
 import { zip } from '../helpers.js'
 

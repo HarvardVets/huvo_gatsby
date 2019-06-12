@@ -1,6 +1,6 @@
 import React from 'react'
-import Ajax from '../Ajax.js'
-import style from '../styles/Gallery.module.sass'
+import Ajax from '../ajax.js'
+import style from '../styles/gallery.module.sass'
 
 export default class Gallery extends React.Component {
   constructor(props) {
