@@ -28,7 +28,7 @@ const About = () => (
       <div>
         <div className={style.wrapper}>
           {data.allMarkdownRemark.edges.map(({ node }) => (
-            <Member member={node.frontmatter} />
+            <Member member={node.frontmatter} style={style} />
           ))}
         </div>
       </div>
