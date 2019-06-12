@@ -14,7 +14,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const blogPostTemplate = path.resolve(`src/templates/blogTemplate.js`)
+  const blogPostTemplate = path.resolve(`src/templates/blogtemplate.js`)
 
   // query for all markdown files in the subfolder, 'blog', by descending date
   return graphql(`
