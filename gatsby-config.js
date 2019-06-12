@@ -43,6 +43,13 @@ module.exports = {
         path: `${__dirname}/static/assets`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/faqs`,
+        name: 'faqs',
+      },
+    },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,

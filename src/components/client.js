@@ -1,5 +1,5 @@
 import React from 'react'
-import { StaticQuery } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
 
 import IndexMission from './Client/mission.js'
 import IndexPoints from './Client/IndexPoints.js'

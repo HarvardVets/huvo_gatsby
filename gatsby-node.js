@@ -1,5 +1,16 @@
 const path = require('path')
 
+// stolen from Gatsby docs. Add the file slug to its node.fields for each file we create
+const { createFilePath } = require(`gatsby-source-filesystem`)
+
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === `MarkdownRemark`) {
+    const slug = createFilePath({ node, getNode, basePath: `pages` })
+    createNodeField({ node, name: `slug`, value: slug })
+  }
+}
+
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
@@ -10,7 +21,6 @@ exports.createPages = ({ actions, graphql }) => {
     {
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
         filter: { fileAbsolutePath: { regex: "/(blog)/.*.md$/" } }
       ) {
         edges {

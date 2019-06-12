@@ -1,14 +1,18 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
-
-import Layout from '../components/layout.js'
-import Blog from '../components/blog.js'
+import { Link } from 'gatsby'
 
 class BlogPage extends React.Component {
   render() {
-    const { posts } = this.props
+    const posts = this.props.posts
+    console.log(posts)
     return (
-      <Layout>
+      <div>
+        <p>blah</p>
+      </div>
+    )
+    /*
+    return (
+      <div>
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
@@ -27,8 +31,9 @@ class BlogPage extends React.Component {
             </div>
           )
         })}
-      </Layout>
+      </div>
     )
+  */
   }
 }
 

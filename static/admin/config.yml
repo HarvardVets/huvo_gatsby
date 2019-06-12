@@ -41,4 +41,4 @@ collections:
     fields:
       - { name: question, label: Question }
       - { name: answer, label: Answer }
-      - { name: category, label: Category, widget: select, options: ["admissions", "Student Life", "HUVO related" ] }
+      - { name: category, label: Category, widget: select, options: ["Admissions", "Student Life", "HUVO Related" ] }
