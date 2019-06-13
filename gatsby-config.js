@@ -21,8 +21,8 @@ module.exports = {
         link: '/faqs',
       },
       {
-        name: 'Gallery',
-        link: '/gallery',
+        name: 'Blog',
+        link: '/blog',
       },
     ],
     mission:

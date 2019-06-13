@@ -72,5 +72,7 @@ yarn-error.log
 # emacs temp files
 .#*
 
-# keys script
+# keys 
 keys.sh
+.env.*
+

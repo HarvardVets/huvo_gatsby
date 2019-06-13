@@ -17,3 +17,5 @@ siteMetadata: {
   plugins:  these are the Gatsby plugins the site uses, please don't edit these if you don't understand what they are
 }
 ```
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e89f1121-764f-4e67-b62f-94a8c55400ce/deploy-status)](https://app.netlify.com/sites/nostalgic-blackwell-d4188f/deploys)
