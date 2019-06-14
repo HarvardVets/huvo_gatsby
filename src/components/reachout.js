@@ -4,8 +4,6 @@ import { navigate } from 'gatsby'
 
 import style from './../styles/reachout.module.sass'
 
-import apiClient from '../utils/apigClient.js'
-
 export default class ReachOut extends React.Component {
   constructor(props) {
     super(props)
@@ -30,6 +28,7 @@ export default class ReachOut extends React.Component {
     try {
       let { name, email, message } = this.state
       var params = { name, email, message }
+      /*
       var client = apiClient.newClient({ apiKey: process.env.GATSBY_API_KEY })
       await client
         .post(params)
@@ -39,6 +38,7 @@ export default class ReachOut extends React.Component {
         .catch(e => {
           console.error(e)
         })
+        */
       window.alert('Email Sent!')
       navigate('/')
     } catch (e) {
