@@ -2,6 +2,9 @@ import React from 'react'
 import { Form, Button } from 'react-bootstrap'
 import { navigate } from 'gatsby'
 
+import Amplify, { API } from 'aws-amplify'
+import awscfg from '../aws-exports.js'
+
 import style from './../styles/reachout.module.sass'
 
 export default class ReachOut extends React.Component {
@@ -13,6 +16,7 @@ export default class ReachOut extends React.Component {
       email: '',
       reset: false,
     }
+    Amplify.configure(awscfg)
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
@@ -27,19 +31,17 @@ export default class ReachOut extends React.Component {
     e.preventDefault()
     try {
       let { name, email, message } = this.state
-      var params = { name, email, message }
-      /*
-      var client = apiClient.newClient({ apiKey: process.env.GATSBY_API_KEY })
-      await client
-        .post(params)
+      let apiName = 'huvoapi'
+      let path = '/reachout'
+      let params = { name, email, message }
+      await API.post(apiName, path, { body: params })
         .then(result => {
           console.log(result)
         })
         .catch(e => {
           console.error(e)
         })
-        */
-      window.alert('Email Sent!')
+
       navigate('/')
     } catch (e) {
       console.error(e)
