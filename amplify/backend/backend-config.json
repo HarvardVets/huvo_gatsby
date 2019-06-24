@@ -4,11 +4,6 @@
 			"service": "Lambda",
 			"providerPlugin": "awscloudformation",
 			"build": true
-		},
-		"nononono": {
-			"service": "Lambda",
-			"providerPlugin": "awscloudformation",
-			"build": true
 		}
 	},
 	"api": {
