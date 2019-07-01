@@ -2,7 +2,6 @@ import React from 'react'
 import { Form, Button } from 'react-bootstrap'
 import { navigate } from 'gatsby'
 
-import Amplify, { API } from 'aws-amplify'
 import awscfg from './../aws-exports.js'
 
 import style from './../styles/reachout.module.sass'
@@ -16,7 +15,6 @@ export default class ReachOut extends React.Component {
       email: '',
       reset: false,
     }
-    Amplify.configure(awscfg)
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
