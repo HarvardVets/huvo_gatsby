@@ -3,7 +3,7 @@ import { Form, Button } from 'react-bootstrap'
 import { navigate } from 'gatsby'
 
 import Amplify, { API } from 'aws-amplify'
-import awscfg from '../aws-exports.js'
+import awscfg from './../aws-exports.js'
 
 import style from './../styles/reachout.module.sass'
 
