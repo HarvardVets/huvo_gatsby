@@ -2,8 +2,6 @@ import React from 'react'
 import { Form, Button } from 'react-bootstrap'
 import { navigate } from 'gatsby'
 
-import awscfg from './../aws-exports.js'
-
 import style from './../styles/reachout.module.sass'
 
 export default class ReachOut extends React.Component {
@@ -32,13 +30,13 @@ export default class ReachOut extends React.Component {
       let apiName = 'huvoapi'
       let path = '/reachout'
       let params = { name, email, message }
-      await API.post(apiName, path, { body: params })
-        .then(result => {
-          console.log(result)
-        })
-        .catch(e => {
-          console.error(e)
-        })
+      // await API.post(apiName, path, { body: params })
+      //   .then(result => {
+      //     console.log(result)
+      //   })
+      //   .catch(e => {
+      //     console.error(e)
+      //   })
 
       navigate('/')
     } catch (e) {
