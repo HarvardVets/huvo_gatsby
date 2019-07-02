@@ -1,6 +1,7 @@
 import React from 'react'
 import { Form, Button } from 'react-bootstrap'
 import { navigate } from 'gatsby'
+import axios from 'axios'
 
 import style from './../styles/reachout.module.sass'
 
@@ -27,20 +28,23 @@ export default class ReachOut extends React.Component {
     e.preventDefault()
     try {
       let { name, email, message } = this.state
-      let apiName = 'huvoapi'
-      let path = '/reachout'
-      let params = { name, email, message }
-      // await API.post(apiName, path, { body: params })
-      //   .then(result => {
-      //     console.log(result)
-      //   })
-      //   .catch(e => {
-      //     console.error(e)
-      //   })
-
+      let data = { name, email, message }
+      const headers = {
+        'x-api-key': process.env.GATSBY_API_KEY,
+        'content-type': 'application/json',
+      }
+      await axios({ method: 'POST', url: process.env.GATSBY_API_URL, headers })
+      await axios
+        .post(process.env.GATSBY_API_URL, data)
+        .then(c => {
+          console.log('hi')
+          console.log(c)
+        })
+        .catch(e => console.log(e))
       navigate('/')
     } catch (e) {
-      console.error(e)
+      console.log('bye')
+      console.log(e)
     }
   }
 
