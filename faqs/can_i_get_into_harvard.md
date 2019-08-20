@@ -1,5 +1,5 @@
 ---
 question: Can I get into Harvard?
-answer: "No"
+answer: 'No'
 category: Admissions
 ---
