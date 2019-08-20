@@ -1,46 +1,36 @@
-import React from 'react'
-import style from './../styles/faqs.module.sass'
+import React from "react"
+import PropTypes from "prop-types"
 
-/*
-  this.props.faqs = {
-  category: [{
-  {
-  "question": "Can I get into Harvard?",
-  "answer": "No",
-  "category": "admissions"
-  }
-
-  }]
-  }
-   */
+import Category from "./faq/category.js"
+import style from "./../styles/faqs.module.sass"
+import { Question } from "./../schema.js"
 
 export default class FAQ extends React.Component {
-  render() {
-    let questions = this.props.faqs
-    let categories = []
+  constructor(props) {
+    super(props)
+    let questions = props.faqs
+    // {"questioncategory": [{question:, answer:}]}
     console.log(questions)
+    let categories = []
     Object.keys(questions).forEach(category => {
-      let category_div = (
-        <div className={style.category} key={category}>
-          <h3>{category}</h3>
-          <div className={style.faqs}>
-            {questions[category].map((question, i) => (
-              <div className={style.faq} key={i}>
-                <div className={style.question} key={style.question}>
-                  <p className={style.Q}>Q:</p>
-                  <p> {question.question}</p>
-                </div>
-                <div className={style.answer} key={style.answer}>
-                  <p className={style.A}>A:</p>
-                  <p> {question.answer}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )
-      categories.push(category_div)
+      categories.push({ category: category, questions: questions[category] })
     })
-    return categories
+
+    this.state = {
+      categories,
+    }
   }
+  render() {
+    return (
+      <div className={style.wrapper}>
+        {this.state.categories.map(({ category, questions }) => (
+          <Category title={category} questions={questions} key={category} />
+        ))}
+      </div>
+    )
+  }
+}
+
+FAQ.propTypes = {
+  faqs: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.exact(Question))),
 }

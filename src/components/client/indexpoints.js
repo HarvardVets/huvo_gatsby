@@ -22,7 +22,7 @@ var points = [
 
 class IndexPoints extends React.Component {
   render() {
-    points = points.map((el, i) => (
+    let new_points = points.map((el, i) => (
       <h3 className={style.indexPointCasing} key={i}>
         <Link className={style.indexPoint} to={el.link}>
           {el.text}
@@ -40,7 +40,7 @@ class IndexPoints extends React.Component {
         </h3>
       ))
     // zip together the bars and points jsx then splice the last bar off
-    var points_jsx = zip([points, intermediate_bars])
+    var points_jsx = zip([new_points, intermediate_bars])
     points_jsx.splice(-1, 1)
     return <div className={style.indexPointWrapper}>{points_jsx}</div>
   }

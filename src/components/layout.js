@@ -4,14 +4,14 @@
  *
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
-import React from 'react'
-import PropTypes from 'prop-types'
-import { StaticQuery, graphql } from 'gatsby'
-import Helmet from 'react-helmet'
+import React from "react"
+import PropTypes from "prop-types"
+import { StaticQuery, graphql } from "gatsby"
+import Helmet from "react-helmet"
 
-import Header from './header'
-import Footer from './footer.js'
-import style from './../styles/layout.module.sass'
+import Header from "./header"
+import Footer from "./footer.js"
+import style from "./../styles/layout.module.sass"
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -34,6 +34,10 @@ const Layout = ({ children }) => (
           <Helmet>
             <link
               href="https://fonts.googleapis.com/css?family=EB+Garamond&amp;display=swap"
+              rel="stylesheet"
+            />
+            <link
+              href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
               rel="stylesheet"
             />
           </Helmet>

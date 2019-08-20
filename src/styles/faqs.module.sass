@@ -1,3 +1,5 @@
+@import _vars
+
 .page
   min-height: 1000px
   display: flex
@@ -11,21 +13,28 @@
 
 
 .wrapper
-  width: 60vw
-  display: flex
-  align-items: center
-  flex-direction: column
-  margin: 15px
+  background-color: white
 
 .category
-  > h3
-    color: white
+  background-color: white
+  width: 85%
+  margin-left: auto
+  margin-right: auto
+  > i
+    margin-left: auto
+    font-size: 2em
+
+#category-title
+  font-size: 2em
+  width: 100%
+  text-align: center
+
+.title-under-bar
+
 
 .faqs
 
 .faq
-  background-color: grey
-  width: 85%
   margin-left: auto
   margin-right: auto
   display: flex
@@ -35,14 +44,23 @@
 .question
   width: 100%
   display: inline
+  border-left: 3px solid crimson
+  background-color: $med_grey
 
 .answer
   width: 100%
   display: inline
+  border-left: 3px solid grey
+  background-color: white
+
 
 .Q
   width: 5%
+  font-size: 1.5em
   display: inline
+  padding: 5px 5px 5px 5px
 
 .A
   display: inline
+  font-size: 1.5em
+  padding: 5px 5px 5px 5px

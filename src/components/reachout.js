@@ -1,16 +1,17 @@
-import React from 'react'
-import { Form, Button } from 'react-bootstrap'
-import { navigate } from 'gatsby'
+import React from "react"
+import { Form, Button } from "react-bootstrap"
+import { navigate } from "gatsby"
+import axios from "axios"
 
-import style from './../styles/reachout.module.sass'
+import style from "./../styles/reachout.module.sass"
 
 export default class ReachOut extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      message: '',
-      name: '',
-      email: '',
+      message: "",
+      name: "",
+      email: "",
       reset: false,
     }
     this.handleChange = this.handleChange.bind(this)
@@ -27,22 +28,29 @@ export default class ReachOut extends React.Component {
     e.preventDefault()
     try {
       let { name, email, message } = this.state
-      var params = { name, email, message }
-      /*
-      var client = apiClient.newClient({ apiKey: process.env.GATSBY_API_KEY })
-      await client
-        .post(params)
-        .then(result => {
-          console.log(result)
+      let data = { name, email, message }
+      const headers = {
+        "x-api-key": process.env.GATSBY_API_KEY,
+      }
+      const config = {
+        method: "post",
+        url: process.env.GATSBY_API_URL,
+        headers,
+        data,
+      }
+      await axios(config)
+        .then(c => {
+          navigate("/")
         })
         .catch(e => {
-          console.error(e)
+          alert(
+            "Error sending message, please check your internet connection and try again"
+          )
+          console.log(e)
         })
-        */
-      window.alert('Email Sent!')
-      navigate('/')
     } catch (e) {
-      console.error(e)
+      console.log("bye")
+      console.log(e)
     }
   }
 
