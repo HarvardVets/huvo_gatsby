@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: drawnwren/huvo_gatsby
+  repo: HarvardVets/huvo_gatsby
 
 publish_mode: editorial_workflow
 
