@@ -16,13 +16,15 @@ module.exports = {
         name: "Reach Out",
         link: "/reachout",
       },
+      /* ##TODO: Waiting on data
       {
         name: "FAQ",
         link: "/faqs",
       },
+      */
     ],
     mission:
-      "Our mission is to ullamcorper, vel facilisis diam rhoncus. Nunc porttitor at est sodales ultricies. Nullam ut odio nec libero vestibulum luctus sit amet in velit. Donec commodo semper urna. Aenean mollis est et fringilla sodales. Vestibulumsed pharetra tortor, a molestie urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam eu leo efficitur, feugiat metus in, fringilla mauris. Sed lectus metus, malesuada sit amet dui id, accumsan ultrices justo. Sed dapibus aliquet tempor. Curabitur libero leo, eleifend a massa et, finibus lobortis nisl. Aliquam sed volutpat nibh. Phasellus tempor ut ex a auctor.",
+      "The Harvard Undergraduate Veterans Organization represents American and international veterans at Harvard College. As an organization, we unify a small, select demographic inside of Harvard College with the aim of facilitating exchange of ideas with and increasing awareness of veterans in the greater Harvard community. Aside from our commitment to the exchange of ideas within the college, we also liaise with the larger veteran communities at Harvard’s graduate schools, veterans seeking admission to Harvard College, and those in the professional world who seek to share their experience with student veterans. Our organization continues to work hand-in-hand with Harvard and veterans to smooth the application and transition process for those who have demonstrated excellence in the service of their nation.",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
