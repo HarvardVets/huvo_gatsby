@@ -9,7 +9,7 @@ description: >-
   has one combat deployment to Afghanistan and spent the majority of his service
   stationed in Ft. Benning, GA, serving in the 75th Ranger Regiment’s Regimental
   Special Troops Battalion (RSTB). Luke is engaged in building the veteran
-  community at Harvard and is the president and co- founder of the Harvard
+  community at Harvard and is the president and co-founder of the Harvard
   Undergraduate Veterans Organization (HUVO). They have found leadership and a
   tremendous support network in HVO and HVAO and will continue to work to
   promote veteran affairs for undergraduates for the rest of their time in
