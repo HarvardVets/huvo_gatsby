@@ -15,5 +15,6 @@ description: >-
   promote veteran affairs for undergraduates for the rest of their time in
   school. Beyond Harvard, Luke is interested in clean energy, new technology,
   and understanding the business applications of his academic coursework.
+order: 1
 ---
 
