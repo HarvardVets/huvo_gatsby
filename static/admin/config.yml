@@ -33,7 +33,7 @@ collections:
       - { name: title, label: Title }
       - { name: picture, label: Picture, widget: image }
       - { name: description, label: Description }
-      - { name: order, label: Order Number }
+      - { name: order, label: Order Number, widget: number }
   - name: faqs
     label: FAQs
     folder: faqs
