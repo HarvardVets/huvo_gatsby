@@ -9,5 +9,6 @@ description: >-
   and a half years in the Army as an Airborne Infantryman, with one deployment
   to Iraq in 2015. He hopes to pursue a music career after graduation, and is
   passionate about being a positive role model in community.
+order: 4
 ---
 
