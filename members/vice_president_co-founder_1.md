@@ -9,5 +9,6 @@ description: >-
   Leadership Institute at Harvard where he can impart knowledge about leadership
   and teamwork onto future generations.  He enjoys hiking and snowboarding in
   the north east and plans to work in finance after graduation.
+order: 2
 ---
 
