@@ -10,5 +10,6 @@ description: >-
   Undergraduate Veterans Organization and Harvard Leadership Institute. When he
   graduates, Chris hopes to run a nonprofit for veterans. In his free time Chris
   enjoys rock climbing, mountaineering, and skiing.
+order: 3
 ---
 
