@@ -33,6 +33,7 @@ collections:
       - { name: title, label: Title }
       - { name: picture, label: Picture, widget: image }
       - { name: description, label: Description }
+      - { name: order, label: Order Number }
   - name: faqs
     label: FAQs
     folder: faqs
@@ -41,4 +42,9 @@ collections:
     fields:
       - { name: question, label: Question }
       - { name: answer, label: Answer }
-      - { name: category, label: Category, widget: select, options: ["Admissions", "Student Life", "HUVO Related" ] }
+      - {
+          name: category,
+          label: Category,
+          widget: select,
+          options: ["Admissions", "Student Life", "HUVO Related"],
+        }

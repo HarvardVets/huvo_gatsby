@@ -1,23 +1,24 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from "react"
+import { Link } from "gatsby"
 
-import { zip } from '../../utils/helpers.js'
-import style from '../../styles/client.module.sass'
+import { zip } from "../../utils/helpers.js"
+import style from "../../styles/client.module.sass"
 
 // ##TODO: factor this into graphql
 var points = [
   {
-    text: 'Get Involved',
-    link: 'events',
+    text: "Harvard Undergraduate Veterans Organization",
+  },
+  /*
+  {
+    text: "Get Informed",
+    link: "https://college.harvard.edu/admissions/apply/us-military-veterans",
   },
   {
-    text: 'Get Informed',
-    link: 'faqs',
+    text: "Reach Out",
+    link: "reachout",
   },
-  {
-    text: 'Reach Out',
-    link: 'reachout',
-  },
+*/
 ]
 
 class IndexPoints extends React.Component {

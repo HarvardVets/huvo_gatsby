@@ -16,6 +16,10 @@ module.exports = {
         name: "Reach Out",
         link: "/reachout",
       },
+      {
+        name: "Patrons",
+        link: "/patrons",
+      },
       /* ##TODO: Waiting on data
       {
         name: "FAQ",
