@@ -1,12 +1,16 @@
-import React from 'react'
+import React from "react"
 
-import style from '../../styles/aboutus.module.sass'
+import style from "../../styles/aboutus.module.sass"
 
 const Member = ({ member }) => (
   <div className={style.member} key={member.id}>
     <img src={member.picture} alt={member.name} />
     <div className={style.description}>
-      <h4>{member.name}</h4>
+      <div className={style.titleBlock}>
+        <h3>{member.name}</h3>
+        <h5>{member.title}</h5>
+        <hr />
+      </div>
       <p>{member.description}</p>
     </div>
   </div>

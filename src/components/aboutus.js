@@ -1,8 +1,8 @@
-import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
+import React from "react"
+import { graphql, StaticQuery } from "gatsby"
 
-import style from './../styles/aboutus.module.sass'
-import Member from './aboutus/member.js'
+import style from "./../styles/aboutus.module.sass"
+import Member from "./aboutus/member.js"
 
 const About = () => (
   <StaticQuery
@@ -10,6 +10,7 @@ const About = () => (
       {
         allMarkdownRemark(
           filter: { fileAbsolutePath: { regex: "/(members)/.*.md$/" } }
+          sort: { fields: [frontmatter___order], order: ASC }
         ) {
           edges {
             node {
@@ -18,6 +19,7 @@ const About = () => (
                 title
                 picture
                 description
+                order
               }
             }
           }
